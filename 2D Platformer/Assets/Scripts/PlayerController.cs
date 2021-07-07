@@ -13,10 +13,15 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
 
     private bool canDoubleJump;
+
+    private Animator anim;
+    private SpriteRenderer theSR;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        theSR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -41,5 +46,18 @@ public class PlayerController : MonoBehaviour
                 canDoubleJump = false;
             }
         }
+
+        // Flip asset horizontaly if player go left
+        if(theRB.velocity.x < 0)
+        {
+            theSR.flipX = true;
+        } else if(theRB.velocity.x > 0)
+        {
+            theSR.flipX = false;
+        }
+
+        // Animations
+        anim.SetBool("isGrounded", isGrounded);
+        anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));
     }
 }
