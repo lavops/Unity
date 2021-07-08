@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 3
+  maxHealth: 6
 --- !u!1 &5172760490564992853
 GameObject:
   m_ObjectHideFlags: 0
