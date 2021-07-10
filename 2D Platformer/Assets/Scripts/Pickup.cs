@@ -26,6 +26,7 @@ public class Pickup : MonoBehaviour
             if(isGem)
             {
                 LevelManager.instance.gemsCollected++;
+                UIController.instance.UpdateGemDisplay();
 
                 isCollected = true;
 
