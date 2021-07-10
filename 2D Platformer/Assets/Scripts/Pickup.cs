@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     public bool isGem;
+    public bool isHeal;
     private bool isCollected;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,13 @@ public class Pickup : MonoBehaviour
             if(isGem)
             {
                 LevelManager.instance.gemsCollected++;
+
+                isCollected = true;
+
+                Destroy(gameObject);
+            } else if(isHeal)
+            {
+                PlayerHealthController.instance.HealPlayer();
 
                 isCollected = true;
 
