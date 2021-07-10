@@ -8,6 +8,8 @@ public class CheckpointController : MonoBehaviour
 
     private Checkpoint[] checkpoints;
 
+    public Vector3 spawnPoint;
+
     private void Awake()
     {
         instance = this;
@@ -17,6 +19,8 @@ public class CheckpointController : MonoBehaviour
     void Start()
     {
         checkpoints = FindObjectsOfType<Checkpoint>();
+
+        spawnPoint = PlayerHealthController.instance.transform.position;
     }
 
     // Update is called once per frame
@@ -31,5 +35,10 @@ public class CheckpointController : MonoBehaviour
         {
             checkpoints[i].ResetCheckpoint();
         }
+    }
+
+    public void SetSpawnPoint(Vector3 newSpawnPoint)
+    {
+        spawnPoint = newSpawnPoint;
     }
 }
