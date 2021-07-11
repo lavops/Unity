@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     public float knockbackLength, knockbackForce;
     private float knockbackCounter;
 
+    public float bounceForce;
+
     private void Awake()
     {
         instance = this;
@@ -97,5 +99,10 @@ public class PlayerController : MonoBehaviour
         knockbackCounter = knockbackLength;
         // Stop player and knockback him
         theRB.velocity = new Vector2(0f, knockbackForce);
+    }
+
+    public void Bounce()
+    {
+        theRB.velocity = new Vector2(theRB.velocity.x, bounceForce);
     }
 }
