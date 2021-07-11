@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5172760489679512753}
   - component: {fileID: 8639212858683050788}
   m_Layer: 7
-  m_Name: player
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 48797705
-  m_SortingLayer: 1
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7815371044791450175, guid: d0ff653f4b4d3f14dab1926a9ed3efb6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -179,7 +179,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 6
-  invincibleLenght: 1
+  invincibleLenght: 0.25
+  deathEffect: {fileID: 475397418806405917, guid: 904772dc11d905043aed677530d2ec6e, type: 3}
 --- !u!1 &5172760490564992853
 GameObject:
   m_ObjectHideFlags: 0
