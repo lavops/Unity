@@ -38,7 +38,7 @@ public class Pickup : MonoBehaviour
 
                 Instantiate(pickupEffect, transform.position, transform.rotation);
 
-            } else if(isHeal)
+            } else if(isHeal && PlayerHealthController.instance.currentHealth < PlayerHealthController.instance.maxHealth)
             {
                 PlayerHealthController.instance.HealPlayer();
 
