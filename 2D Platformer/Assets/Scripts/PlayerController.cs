@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     public float bounceForce;
 
+    public bool stopInput;
     private void Awake()
     {
         instance = this;
@@ -40,7 +41,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // If game is paused
-        if (!PauseMenu.instance.isPaused)
+        if (!PauseMenu.instance.isPaused && !stopInput)
         {
             // If player didn't take damage
             if (knockbackCounter <= 0)
