@@ -61,6 +61,8 @@ public class PlayerController : MonoBehaviour
                     theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
                     canDoubleJump = false;
                 }
+
+                AudioManager.instance.PlaySFX(10);
             }
 
             // Flip asset horizontaly if player go left

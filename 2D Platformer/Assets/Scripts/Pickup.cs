@@ -38,6 +38,8 @@ public class Pickup : MonoBehaviour
 
                 Instantiate(pickupEffect, transform.position, transform.rotation);
 
+                AudioManager.instance.PlaySFX(6);
+
             } else if(isHeal && PlayerHealthController.instance.currentHealth < PlayerHealthController.instance.maxHealth)
             {
                 PlayerHealthController.instance.HealPlayer();
@@ -49,6 +51,8 @@ public class Pickup : MonoBehaviour
                 // call pickup effect
 
                 Instantiate(pickupEffect, transform.position, transform.rotation);
+
+                AudioManager.instance.PlaySFX(7);
             }
         }
     }
