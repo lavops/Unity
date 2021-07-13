@@ -52,11 +52,17 @@ public class PauseMenu : MonoBehaviour
 
     public void LevelSelect()
     {
+        PlayerPrefs.SetString("Current_Level", SceneManager.GetActiveScene().name);
+
         SceneManager.LoadScene(levelSelect);
+
+        Time.timeScale = 1f;
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene(mainMenu);
+
+        Time.timeScale = 1f;
     }
 }

@@ -81,9 +81,10 @@ public class LevelManager : MonoBehaviour
 
         // Set global variables
 
-        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_Unlocked", 1);
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_Unlocked", 1); 
+        PlayerPrefs.SetString("Current_Level", SceneManager.GetActiveScene().name);
 
-        if(PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_Gems_Collected"))
+        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_Gems_Collected"))
         {
             if(PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_Gems_Collected") < gemsCollected)
             {

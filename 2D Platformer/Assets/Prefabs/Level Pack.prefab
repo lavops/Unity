@@ -600,6 +600,7 @@ MonoBehaviour:
   waitToRespawn: 2
   gemsCollected: 0
   levelToLoad: Main_Menu
+  timeInLevel: 0
 --- !u!1 &7082685635731809118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,7 +1104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d12f036cc3828c468a949adb6c4828f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSelect: 
+  levelSelect: Level_Select
   mainMenu: Main_Menu
   pauseScreen: {fileID: 7082685635864454756}
   isPaused: 0
