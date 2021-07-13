@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082e69f681084fd4fbc06a1749fa398b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startScene: Testing 2
+  startScene: Level_1
 --- !u!1 &1840203798
 GameObject:
   m_ObjectHideFlags: 0
