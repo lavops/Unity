@@ -8,11 +8,24 @@ public class MapPoint : MonoBehaviour
     public bool isLevel, isLocked;
     public string levelToLoad, levelToCheck, levelName;
 
+    public int gemsCollected, totalGems;
+    public float bestTime, targetTime;
+
     // Start is called before the first frame update
     void Start()
     {
         if(isLevel && levelToLoad != null)
         {
+            if(PlayerPrefs.HasKey(levelToLoad + "_Gems_Collected"))
+            {
+                gemsCollected = PlayerPrefs.GetInt(levelToLoad + "_Gems_Collected");
+            }
+
+            if(PlayerPrefs.HasKey(levelToLoad + "_Time"))
+            {
+                bestTime = PlayerPrefs.GetFloat(levelToLoad + "_Time");
+            }
+
             isLocked = true;
 
             if(levelToCheck != null)
