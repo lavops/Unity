@@ -64,8 +64,7 @@ public class BossTankController : MonoBehaviour
 
                         moveRight = false;
 
-                        currentState = bossStates.shooting;
-                        shotsCounter = timeBetweenShots;
+                        EndMovement();
                     }
                 } else
                 {
@@ -78,8 +77,7 @@ public class BossTankController : MonoBehaviour
 
                         moveRight = true;
 
-                        currentState = bossStates.shooting;
-                        shotsCounter = timeBetweenShots;
+                        EndMovement();
                     }
                 }
 
@@ -100,5 +98,15 @@ public class BossTankController : MonoBehaviour
     {
         currentState = bossStates.hurt;
         hurtCounter = hurtTime;
+
+        anim.SetTrigger("Hit");
+    }
+
+    private void EndMovement()
+    {
+        currentState = bossStates.shooting;
+        shotsCounter = timeBetweenShots;
+
+        anim.SetTrigger("StopMoving");
     }
 }
