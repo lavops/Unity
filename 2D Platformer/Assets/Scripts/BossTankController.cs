@@ -54,6 +54,35 @@ public class BossTankController : MonoBehaviour
 
             case bossStates.moving:
 
+                if(moveRight) 
+                {
+                    theBoss.position += new Vector3(moveSpeed * Time.deltaTime, 0f, 0f);
+
+                    if(theBoss.position.x > rightPoint.position.x)
+                    {
+                        theBoss.localScale = new Vector3(1f, 1f, 1f);
+
+                        moveRight = false;
+
+                        currentState = bossStates.shooting;
+                        shotsCounter = timeBetweenShots;
+                    }
+                } else
+                {
+                    
+                    theBoss.position -= new Vector3(moveSpeed * Time.deltaTime, 0f, 0f);
+
+                    if (theBoss.position.x < leftPoint.position.x)
+                    {
+                        theBoss.localScale = new Vector3(-1f, 1f, 1f);
+
+                        moveRight = true;
+
+                        currentState = bossStates.shooting;
+                        shotsCounter = timeBetweenShots;
+                    }
+                }
+
                 break;
         }
 
