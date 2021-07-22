@@ -461,7 +461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1104638940952425264, guid: f6ad998bc078d4943a63358853f4e771, type: 3}
       propertyPath: levelName
-      value: 
+      value: '3: The Boss'
       objectReference: {fileID: 0}
     - target: {fileID: 1104638940952425264, guid: f6ad998bc078d4943a63358853f4e771, type: 3}
       propertyPath: totalGems
@@ -473,11 +473,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1104638940952425264, guid: f6ad998bc078d4943a63358853f4e771, type: 3}
       propertyPath: levelToLoad
-      value: 
+      value: Level_3
       objectReference: {fileID: 0}
     - target: {fileID: 1104638940952425264, guid: f6ad998bc078d4943a63358853f4e771, type: 3}
       propertyPath: levelToCheck
-      value: 
+      value: Level_2
       objectReference: {fileID: 0}
     - target: {fileID: 2448836933629987028, guid: f6ad998bc078d4943a63358853f4e771, type: 3}
       propertyPath: m_Name
