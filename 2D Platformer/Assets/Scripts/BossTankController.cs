@@ -24,6 +24,7 @@ public class BossTankController : MonoBehaviour
     [Header("Hurt")]
     public float hurtTime;
     private float hurtCounter;
+    public GameObject hitBox;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,17 @@ public class BossTankController : MonoBehaviour
         switch (currentState) 
         {
             case bossStates.shooting:
+
+                shotsCounter -= Time.deltaTime;
+
+                if(shotsCounter <= 0)
+                {
+                    shotsCounter = timeBetweenShots;
+
+                    var newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation);
+
+                    newBullet.transform.localScale = theBoss.localScale;
+                }
 
                 break;
 
@@ -108,5 +120,7 @@ public class BossTankController : MonoBehaviour
         shotsCounter = timeBetweenShots;
 
         anim.SetTrigger("StopMoving");
+
+        hitBox.SetActive(true);
     }
 }
